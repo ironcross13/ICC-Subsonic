@@ -1,4 +1,4 @@
-Madsonic
+Subsonic
 =========
 
 Subsonic - http://www.subsonic.org/
