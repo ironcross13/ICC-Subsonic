@@ -24,7 +24,7 @@ RUN pacman -Sy --noconfirm && \
 	pacman -S libcups jre7-openjdk-headless fontconfig unzip --noconfirm && \
 	mkdir -p /var/subsonic/media && \
 	mkdir -p /var/subsonic/transcode && \
-	tar /var/subsonic/subsonic.tar.gz /var/subsonic && \
+	tar -XZF /var/subsonic/subsonic.tar.gz -c /var/subsonic && \
 	rm /var/subsonic/subsonic.tar.gz && \
 	unzip /var/subsonic/transcode/transcode.zip -d /var/subsonic/transcode && \
 	rm /var/subsonic/transcode/transcode.zip && \
