@@ -5,7 +5,7 @@ MAINTAINER binhex
 ##################
 
 # download subsonic
-ADD http://prdownloads.sourceforge.net/subsonic/subsonic-5.2-standalone.tar.gz /var/subsonic/subsonic.tar.gz
+ADD http://www.subsonic.org/pages/download2.jsp?target=subsonic-5.2-war.zip /var/subsonic/subsonic.zip
 
 # download madsonic transcoders
 ADD http://www.madsonic.org/download/transcode/20141214_madsonic-transcode_latest_x64.zip /var/subsonic/transcode/transcode.zip
@@ -24,8 +24,8 @@ RUN pacman -Sy --noconfirm && \
 	pacman -S libcups jre7-openjdk-headless fontconfig unzip --noconfirm && \
 	mkdir -p /var/subsonic/media && \
 	mkdir -p /var/subsonic/transcode && \
-	unzip /var/subsonic/subsonic.tar.gz -d /var/subsonic && \
-	rm /var/subsonic/subsonic.tar.gz && \
+	unzip /var/subsonic/subsonic.zip -d /var/subsonic && \
+	rm /var/subsonic/subsonic.zip && \
 	unzip /var/subsonic/transcode/transcode.zip -d /var/subsonic/transcode && \
 	rm /var/subsonic/transcode/transcode.zip && \
 	chown -R nobody:users /var/subsonic && \
