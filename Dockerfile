@@ -10,8 +10,8 @@ ADD http://downloads.sourceforge.net/project/subsonic/subsonic/5.2/subsonic-5.2-
 # download madsonic transcoders
 ADD http://www.madsonic.org/download/transcode/20141214_madsonic-transcode_latest_x64.zip /var/subsonic/transcode/transcode.zip
 
-# copy start bash script to madsonic dir (checks ssl enabled/disabled and copies transcoders to madsonic install dir)
-ADD start.sh /var/subsonic/startup.sh
+# copy start bash script to Subsonic dir (checks ssl enabled/disabled and copies transcoders to madsonic install dir)
+ADD start.sh /var/subsonic/start.sh
 
 # add supervisor conf file for app
 ADD subsonic.conf /etc/supervisor/conf.d/subsonic.conf
