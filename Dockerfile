@@ -37,7 +37,7 @@ RUN pacman -Sy --noconfirm && \
 	rm -rf /tmp/*
 
 # force process to run as foreground task
-RUN sed -i 's/-jar subsonic-booter.jar > \${LOG} 2>\&1 \&/-jar subsonic-booter.jar > \${LOG} 2>\&1/g' /var/subsonic/subsonic.sh
+RUN sed -i 's/-jar subsonic-booter-jar-with-dependencies.jar > \${LOG} 2>\&1 \&/-jar subsonic-booter-jar-with-dependencies.jar > \${LOG} 2>\&1/g' /var/subsonic/subsonic.sh
 
 # docker settings
 #################
