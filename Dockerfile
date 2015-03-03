@@ -22,7 +22,6 @@ ADD subsonic.conf /etc/supervisor/conf.d/subsonic.conf
 # install install app using pacman, set perms, cleanup
 RUN pacman -Sy --noconfirm && \
 	pacman -S libcups jre7-openjdk-headless fontconfig unzip --noconfirm && \
-	chown -R nobody:users /var/subsonic && \
 	mkdir -p /var/subsonic/media && \
 	mkdir -p /var/subsonic/transcode && \
 	tar -xf /var/subsonic/subsonic.tar.gz -C /var/subsonic && \
