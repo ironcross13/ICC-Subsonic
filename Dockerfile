@@ -5,7 +5,7 @@ MAINTAINER binhex
 ##################
 
 # download subsonic
-ADD http://downloads.sourceforge.net/project/subsonic/subsonic/5.2.1/subsonic-5.2.1-standalone.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F5.2.1%2F&ts=1426087882&use_mirror=iweb /var/subsonic/subsonic.tar.gz
+ADD http://downloads.sourceforge.net/project/subsonic/subsonic/5.2.1/subsonic-5.2.1-standalone.tar.gz?r=&ts=1426094203&use_mirror=superb-dca2 /var/subsonic/subsonic.tar.gz
 
 # download madsonic transcoders
 ADD http://www.madsonic.org/download/transcode/20141214_madsonic-transcode_latest_x64.zip /var/subsonic/transcode/transcode.zip
