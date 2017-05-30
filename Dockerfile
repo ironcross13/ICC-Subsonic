@@ -2,7 +2,7 @@ FROM binhex/arch-base:20170510-01
 MAINTAINER binhex
 
 # additional files
-##################
+###################
 
 # download subsonic
 #ADD http://downloads.sourceforge.net/project/subsonic/subsonic/6.0/subsonic-6.0-standalone.tar.gz?r=&ts=1462470375&use_mirror=heanet /var/subsonic/subsonic.tar.gz
