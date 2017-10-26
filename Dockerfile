@@ -7,10 +7,11 @@ MAINTAINER binhex
 # download subsonic
 #ADD http://downloads.sourceforge.net/project/subsonic/subsonic/6.0/subsonic-6.0-standalone.tar.gz?r=&ts=1462470375&use_mirror=heanet /var/subsonic/subsonic.tar.gz
 #ADD https://downloads.sourceforge.net/project/subsonic/subsonic/6.1/subsonic-6.1-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1%2F&ts=1496133929&use_mirror=pilotfiber /var/subsonic/subsonic.tar.gz
-ADD https://downloads.sourceforge.net/project/subsonic/subsonic/6.1.1/subsonic-6.1.1-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1.1%2F&ts=1497540336&use_mirror=cfhcable /var/subsonic/subsonic.tar.gz
-# download madsonic transcoders
-#ADD http://www.madsonic.org/download/transcode/20141214_madsonic-transcode_latest_x64.zip /var/subsonic/transcode/transcode.zip
+#ADD https://downloads.sourceforge.net/project/subsonic/subsonic/6.1.1/subsonic-6.1.1-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1.1%2F&ts=1497540336&use_mirror=cfhcable /var/subsonic/subsonic.tar.gz
 ADD https://downloads.sourceforge.net/project/subsonic/subsonic/6.1.2/subsonic-6.1.2-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1.2%2F&ts=1509042582&use_mirror=astuteinternet /var/subsonic/subsonic.tar.gz
+
+# download madsonic transcoders
+ADD http://www.madsonic.org/download/transcode/20141214_madsonic-transcode_latest_x64.zip /var/subsonic/transcode/transcode.zip
 
 # copy start bash script to Subsonic dir (checks ssl enabled/disabled and copies transcoders to madsonic install dir)
 ADD start.sh /var/subsonic/start.sh
