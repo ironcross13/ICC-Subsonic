@@ -25,7 +25,7 @@ ADD subsonic.conf /etc/supervisor/conf.d/subsonic.conf
 
 # install install app using pacman, set perms, cleanup
 RUN pacman -Sy --noconfirm && \
-	pacman -S libcups jre7-openjdk-headless fontconfig unzip --noconfirm && \
+	pacman -S libcups jre8-openjdk-headless fontconfig unzip --noconfirm && \
 	mkdir -p /var/subsonic/media && \
 	mkdir -p /var/subsonic/transcode && \
 	tar -xf /var/subsonic/subsonic.tar.gz -C /var/subsonic && \
@@ -47,7 +47,7 @@ RUN sed -i 's/-jar subsonic-booter-jar-with-dependencies.jar > \${LOG} 2>\&1 \&/
 #################
 
 # set env variable for java
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk/jre
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk/jre
 
 # map /config to host defined config path (used to store configuration from app)
 VOLUME /config
