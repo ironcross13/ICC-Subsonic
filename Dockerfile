@@ -13,7 +13,7 @@ MAINTAINER binhex
 ADD  https://downloads.sourceforge.net/project/subsonic/subsonic/6.1.4/subsonic-6.1.4-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1.4%ts=1542050840&use_mirror=superb-sea2 /var/subsonic/subsonic.tar.gz
 # download madsonic transcoders
 #ADD http://www.madsonic.org/download/transcode/20141214_madsonic-transcode_latest_x64.zip /var/subsonic/transcode/transcode.zip
-ADD http://beta.madsonic.org/pages/request.jsp?branch=transcode&target=20161222_madsonic-transcode-linux-x64.zip /var/subsonic/transcode/transcode.zip
+ADD http://madsonic.org/download/transcode/20161208_madsonic-transcode-linux-x64.zip /var/subsonic/transcode/transcode.zip
 
 # copy start bash script to Subsonic dir (checks ssl enabled/disabled and copies transcoders to madsonic install dir)
 ADD start.sh /var/subsonic/start.sh
