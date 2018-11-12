@@ -31,7 +31,7 @@ RUN pacman -Sy --noconfirm && \
 	mkdir -p /var/subsonic/transcode && \
 	tar -xf /var/subsonic/subsonic.tar.gz -C /var/subsonic && \
 	rm /var/subsonic/subsonic.tar.gz && \
-	unzip /var/subsonic/transcode/transcode.zip -d /var/subsonic/transcode && \
+	unzip /var/subsonic/transcode/transcode.zip -d /var/subsonic/transcode/linux && \
 	rm /var/subsonic/transcode/transcode.zip && \
 	chown -R nobody:users /var/subsonic && \
 	chmod -R 775 /var/subsonic && \	
