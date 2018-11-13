@@ -28,6 +28,7 @@ ADD subsonic.conf /etc/supervisor/conf.d/subsonic.conf
 RUN pacman -Sy --noconfirm && \
 	pacman -S libcups jre8-openjdk-headless fontconfig unzip --noconfirm && \
 	mkdir -p /var/subsonic/media && \
+	mkdir -p /var/subsonic/transcode/linux/* && \
 	tar -xf /var/subsonic/subsonic.tar.gz -C /var/subsonic && \
 	rm /var/subsonic/subsonic.tar.gz && \
 	chown -R nobody:users /var/subsonic && \
