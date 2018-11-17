@@ -5,10 +5,6 @@ MAINTAINER binhex
 ###################
 
 # download subsonic
-#ADD http://downloads.sourceforge.net/project/subsonic/subsonic/6.0/subsonic-6.0-standalone.tar.gz?r=&ts=1462470375&use_mirror=heanet /var/subsonic/subsonic.tar.gz
-#ADD https://downloads.sourceforge.net/project/subsonic/subsonic/6.1/subsonic-6.1-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1%2F&ts=1496133929&use_mirror=pilotfiber /var/subsonic/subsonic.tar.gz
-#ADD https://downloads.sourceforge.net/project/subsonic/subsonic/6.1.1/subsonic-6.1.1-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1.1%2F&ts=1497540336&use_mirror=cfhcable /var/subsonic/subsonic.tar.gz
-#ADD https://downloads.sourceforge.net/project/subsonic/subsonic/6.1.2/subsonic-6.1.2-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1.2%2F&ts=1509042582&use_mirror=astuteinternet /var/subsonic/subsonic.tar.gz
 ADD https://downloads.sourceforge.net/project/subsonic/subsonic/6.1.3/subsonic-6.1.3-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1.3&ts=1510598673&use_mirror=superb-sea2  /var/subsonic/subsonic.tar.gz
 #ADD  https://downloads.sourceforge.net/project/subsonic/subsonic/6.1.4/subsonic-6.1.4-standalone.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsubsonic%2Ffiles%2Fsubsonic%2F6.1.4%ts=1542050840&use_mirror=superb-sea2 /var/subsonic/subsonic.tar.gz
 # download madsonic transcoders
@@ -26,10 +22,9 @@ ADD subsonic.conf /etc/supervisor/conf.d/subsonic.conf
 
 # install install app using pacman, set perms, cleanup
 RUN pacman -Sy --noconfirm && \
-	pacman -S libcups jre8-openjdk-headless fontconfig unzip --noconfirm && \
+	pacman -S libcups jre7-openjdk-headless fontconfig unzip --noconfirm && \
 	mkdir -p /var/subsonic/media && \
 	mkdir -p /var/subsonic/transcode && \
-	mkdir -p /config/transcode && \
 	tar -xf /var/subsonic/subsonic.tar.gz -C /var/subsonic && \
 	rm /var/subsonic/subsonic.tar.gz && \
 	unzip /var/subsonic/transcode/transcode.zip -d /var/subsonic/transcode && \
@@ -49,7 +44,7 @@ RUN sed -i 's/-jar subsonic-booter-jar-with-dependencies.jar > \${LOG} 2>\&1 \&/
 #################
 
 # set env variable for java
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk/jre
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk/jre
 
 # map /config to host defined config path (used to store configuration from app)
 VOLUME /config
