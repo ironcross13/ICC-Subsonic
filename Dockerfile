@@ -30,7 +30,6 @@ RUN pacman -Sy --noconfirm && \
 	mkdir -p /var/subsonic/media && \
 	mkdir -p /var/subsonic/transcode && \
 	mkdir -p /config/transcode && \
-	chmod +x /config/transcode/* && \
 	tar -xf /var/subsonic/subsonic.tar.gz -C /var/subsonic && \
 	rm /var/subsonic/subsonic.tar.gz && \
 	unzip /var/subsonic/transcode/transcode.zip -d /var/subsonic/transcode && \
